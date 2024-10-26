@@ -120,16 +120,14 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
 
 const searchParams = new URLSearchParams(window.location.search);
 const renderer = searchParams.get('renderer');
-const entryPointBaseUrl = searchParams.get('entryPointBaseUrl');
 
 let userConfig = {};
 userConfig = renderer ? {...userConfig, 'renderer': renderer} : userConfig;
-userConfig = entryPointBaseUrl ? {...userConfig, 'entryPointBaseUrl': entryPointBaseUrl} : userConfig;
 
 _flutter.loader.load({
   config: userConfig,
   serviceWorkerSettings: {
-    serviceWorkerVersion: "1350949700",
+    serviceWorkerVersion: "1570909213",
   },
 });
 
