@@ -1,3 +1,9 @@
+push-builds:
+	make builds
+	git add public
+	git commit -m "Update builds"
+	git push
+
 builds:
 	make build-default
 	make build-canvas
