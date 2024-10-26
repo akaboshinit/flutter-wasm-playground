@@ -5,21 +5,106 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "flutter-wonders-app",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "flutter-wonders-app (profile mode)",
+            "name": "debug-canvaskit",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "args": [
+                "-d",
+                "chrome",
+                "--web-renderer",
+                "canvaskit",
+            ]
         },
         {
-            "name": "flutter-wonders-app (release mode)",
+            "name": "debug-html",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
+            "args": [
+                "-d",
+                "chrome",
+                "--web-renderer",
+                "html",
+            ]
+        },
+        {
+            "name": "debug-wasm",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "-d",
+                "chrome",
+                "--wasm"
+            ]
+        },
+        {
+            "name": "profile-canvaskit",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "-d",
+                "chrome",
+                "--web-renderer",
+                "canvaskit",
+            ]
+        },
+        {
+            "name": "profile-html",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "-d",
+                "chrome",
+                "--web-renderer",
+                "html",
+            ]
+        },
+        {
+            "name": "profile-wasm",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "-d",
+                "chrome",
+                "--wasm"
+            ]
+        },
+        {
+            "name": "release-canvaskit",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "-d",
+                "chrome",
+                "--web-renderer",
+                "canvaskit",
+            ]
+        },
+        {
+            "name": "release-html",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "-d",
+                "chrome",
+                "--web-renderer",
+                "html",
+            ]
+        },
+        {
+            "name": "release-wasm",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "-d",
+                "chrome",
+                "--wasm"
+            ]
         }
     ]
 }
