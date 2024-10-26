@@ -17,12 +17,12 @@ build-default:
 	flutter build web --release
 	cp -r build/web/* public/default/
 
-build-canvas:
+build-canvaskit:
 	rm -rf build
-	rm -rf public/canvas
+	rm -rf public/canvaskit
 	flutter build web --release --web-renderer canvaskit
-	mkdir -p public/canvas
-	cp -r build/web/* public/canvas/
+	mkdir -p public/canvaskit
+	cp -r build/web/* public/canvaskit/
 
 build-html:
 	rm -rf build
