@@ -106,8 +106,25 @@
   <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
 </picture>
 <script>
-    {{flutter_build_config}}
-    _flutter.loader.load();
+
+{{flutter_js}}
+{{flutter_build_config}}
+
+const searchParams = new URLSearchParams(window.location.search);
+const renderer = searchParams.get('renderer');
+const entryPointBaseUrl = searchParams.get('entryPointBaseUrl');
+
+let userConfig = {};
+userConfig = renderer ? {...userConfig, 'renderer': renderer} : userConfig;
+userConfig = entryPointBaseUrl ? {...userConfig, 'entryPointBaseUrl': entryPointBaseUrl} : userConfig;
+
+_flutter.loader.load({
+  config: userConfig,
+  serviceWorkerSettings: {
+    serviceWorkerVersion: {{flutter_service_worker_version}},
+  },
+});
+
   </script>
 </body>
 </html>
