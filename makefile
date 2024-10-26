@@ -1,3 +1,9 @@
+file-counts:
+	@echo "canvaskit" && find public/canvaskit -type f | wc -l
+	@echo "default" && find public/default -type f | wc -l
+	@echo "html" && find public/html -type f | wc -l
+	@echo "wasm" && find public/wasm -type f | wc -l
+
 push-builds:
 	make builds
 	git add public
