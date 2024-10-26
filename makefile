@@ -6,7 +6,7 @@ push-builds:
 
 builds:
 	make build-default
-	make build-canvas
+	make build-canvaskit
 	make build-html
 	make build-wasm
 
@@ -20,8 +20,8 @@ build-default:
 build-canvaskit:
 	rm -rf build
 	rm -rf public/canvaskit
-	flutter build web --release --web-renderer canvaskit
 	mkdir -p public/canvaskit
+	flutter build web --release --web-renderer canvaskit
 	cp -r build/web/* public/canvaskit/
 
 build-html:
