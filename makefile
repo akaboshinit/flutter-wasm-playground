@@ -4,6 +4,12 @@ file-counts:
 	@echo "html" && find public/html -type f | wc -l
 	@echo "wasm" && find public/wasm -type f | wc -l
 
+file-size:
+	@echo "canvaskit" && du -sh public/canvaskit
+	@echo "default" && du -sh public/default
+	@echo "html" && du -sh public/html
+	@echo "wasm" && du -sh public/wasm
+
 push-builds:
 	make builds
 	git add public
