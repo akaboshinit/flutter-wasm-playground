@@ -42,6 +42,7 @@ class WondersApp extends StatelessWidget with GetItMixin {
     return MaterialApp.router(
       routeInformationProvider: appRouter.routeInformationProvider,
       routeInformationParser: appRouter.routeInformationParser,
+      showPerformanceOverlay: true,
       locale: locale == null ? null : Locale(locale),
       debugShowCheckedModeBanner: false,
       routerDelegate: appRouter.routerDelegate,
