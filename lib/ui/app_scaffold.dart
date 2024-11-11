@@ -19,18 +19,30 @@ class WondersAppScaffold extends StatelessWidget {
     _style = AppStyle(screenSize: context.sizePx);
     return KeyedSubtree(
       key: ValueKey($styles.scale),
-      child: CustomPerformanceOverlay(
-        child: Theme(
-          data: $styles.colors.toThemeData(),
-          // Provide a default texts style to allow Hero's to render text properly
-          child: DefaultTextStyle(
-            style: $styles.text.body,
-            // Use a custom scroll behavior across entire app
-            child: ScrollConfiguration(
-              behavior: AppScrollBehavior(),
-              child: child,
+      child: Scaffold(
+        body: Stack(
+          children: [
+            CustomPerformanceOverlay(
+              alignment: Alignment.bottomRight,
+              child: Theme(
+                data: $styles.colors.toThemeData(),
+                // Provide a default texts style to allow Hero's to render text properly
+                child: DefaultTextStyle(
+                  style: $styles.text.body,
+                  // Use a custom scroll behavior across entire app
+                  child: ScrollConfiguration(
+                    behavior: AppScrollBehavior(),
+                    child: child,
+                  ),
+                ),
+              ),
             ),
-          ),
+            Positioned.fill(
+                child: Align(
+              alignment: Alignment.bottomLeft,
+              child: TextButton(onPressed: () => appRouter.go(ScreenPaths.playground), child: const Text('Playground')),
+            ))
+          ],
         ),
       ),
     );
