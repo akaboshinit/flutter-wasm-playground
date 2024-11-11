@@ -21,7 +21,8 @@ void main() async {
   }
   GoRouter.optionURLReflectsImperativeAPIs = true;
 
-  print('Running with wasm: $kIsWasm');
+  const isRunningWithWasm = identical(double.nan, double.nan);
+  print('Running with wasm: $kIsWasm,$isRunningWithWasm');
 
   // Start app
   registerSingletons();
