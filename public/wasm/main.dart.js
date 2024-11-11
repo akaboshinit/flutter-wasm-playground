@@ -30517,7 +30517,7 @@ var $async$aTe=A.K(function(a,b){if(a===1)return A.G(b,r)
 while(true)switch(s){case 0:if($.a_==null)A.aCU()
 $.a_.toString
 $.b_c=!0
-A.wB("Running with wasm: false")
+A.wB("Running with wasm: false,false")
 A.boo()
 if($.a_==null)A.aCU()
 q=$.a_

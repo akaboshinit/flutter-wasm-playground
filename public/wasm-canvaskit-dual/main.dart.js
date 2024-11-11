@@ -32425,7 +32425,7 @@ var $async$aYm=A.G(function(a,b){if(a===1)return A.C(b,r)
 while(true)switch(s){case 0:if($.a4==null)A.aHx()
 $.a4.toString
 $.b55=!0
-A.xM("Running with wasm: false")
+A.xM("Running with wasm: false,false")
 A.bwe()
 if($.a4==null)A.aHx()
 q=$.a4
