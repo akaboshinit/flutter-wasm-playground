@@ -19,11 +19,11 @@ push-builds:
 	git push
 
 builds:
-	make build-auto
+	# make build-auto
 	make build-canvaskit
-	make build-html
+	# make build-html
 	make build-wasm-canvaskit-dual
-	make build-wasm
+	# make build-wasm
 
 # canvaskit renderer is default
 build-auto:
