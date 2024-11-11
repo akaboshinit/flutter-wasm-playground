@@ -9,6 +9,7 @@ import 'package:wonders/ui/screens/collection/collection_screen.dart';
 import 'package:wonders/ui/screens/home/wonders_home_screen.dart';
 import 'package:wonders/ui/screens/intro/intro_screen.dart';
 import 'package:wonders/ui/screens/page_not_found/page_not_found.dart';
+import 'package:wonders/ui/screens/playground/heavy_render.dart';
 import 'package:wonders/ui/screens/timeline/timeline_screen.dart';
 import 'package:wonders/ui/screens/wonder_details/wonders_details_screen.dart';
 
@@ -17,6 +18,8 @@ class ScreenPaths {
   static String splash = '/';
   static String intro = '/welcome';
   static String home = '/home';
+  // static String playground = '/playground';
+  static String heavyRender = '/heavy_render';
   static String settings = '/settings';
 
   static String wonderDetails(WonderType type, {required int tabIndex}) => '$home/wonder/${type.name}?t=$tabIndex';
@@ -72,7 +75,7 @@ final appRouter = GoRouter(
         },
         routes: [
           AppRoute(ScreenPaths.splash, (_) => Container(color: $styles.colors.greyStrong)), // This will be hidden
-          AppRoute(ScreenPaths.intro, (_) => IntroScreen()),
+          AppRoute(ScreenPaths.intro, (_) => const IntroScreen()),
           AppRoute(ScreenPaths.home, (_) => HomeScreen(), routes: [
             _timelineRoute,
             _collectionRoute,
@@ -116,6 +119,7 @@ final appRouter = GoRouter(
               ],
             ),
           ]),
+          AppRoute(ScreenPaths.heavyRender, (_) => const HeavyRenderPage())
         ]),
   ],
 );
