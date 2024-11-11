@@ -116,10 +116,17 @@ const renderer = searchParams.get('renderer');
 let userConfig = {};
 userConfig = renderer ? {...userConfig, 'renderer': renderer} : userConfig;
 
+const startLoadTime = performance.now();
+
 _flutter.loader.load({
   config: userConfig,
   serviceWorkerSettings: {
     serviceWorkerVersion: {{flutter_service_worker_version}},
+  },
+  onEntrypointLoaded: async function(engineInitializer) {
+    console.log('Flutter is ready to run. Engine initialization time: ' + (performance.now() - startLoadTime) + 'ms');
+    const appRunner = await engineInitializer.initializeEngine();
+    await appRunner.runApp();
   },
 });
 
