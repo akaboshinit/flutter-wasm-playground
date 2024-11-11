@@ -120,14 +120,14 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
 
 const searchParams = new URLSearchParams(window.location.search);
 const renderer = searchParams.get('renderer');
-let userConfig = renderer != null ? {...${_flutter.buildConfig}, 'renderer': renderer} : ${_flutter.buildConfig};
+let userConfig = renderer != null ? {..._flutter.buildConfig, 'renderer': renderer} : _flutter.buildConfig;
 
 const startLoadTime = performance.now();
 
 _flutter.loader.load({
   config: userConfig,
   serviceWorkerSettings: {
-    serviceWorkerVersion: "1921920417",
+    serviceWorkerVersion: "410236724",
   },
   onEntrypointLoaded: async function(engineInitializer) {
     console.log('Flutter is ready to run. Engine initialization time: ' + (performance.now() - startLoadTime) + 'ms');

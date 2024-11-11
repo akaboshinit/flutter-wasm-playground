@@ -112,8 +112,7 @@
 
 const searchParams = new URLSearchParams(window.location.search);
 const renderer = searchParams.get('renderer');
-let userConfig = {};
-userConfig = renderer != null ? {...userConfig, 'renderer': renderer} : userConfig;
+let userConfig = renderer != null ? {..._flutter.buildConfig, 'renderer': renderer} : _flutter.buildConfig;
 
 const startLoadTime = performance.now();
 
