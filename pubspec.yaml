@@ -59,6 +59,7 @@ dependencies:
   webview_flutter: ^4.0.2
   youtube_player_iframe: ^5.1.2
   flutter_hooks: ^0.20.5
+  performance: ^0.1.1
 
 dev_dependencies:
   icons_launcher: ^3.0.0

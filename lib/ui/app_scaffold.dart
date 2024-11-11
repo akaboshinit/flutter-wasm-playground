@@ -1,3 +1,4 @@
+import 'package:performance/performance.dart';
 import 'package:wonders/common_libs.dart';
 import 'package:wonders/ui/common/app_scroll_behavior.dart';
 
@@ -18,15 +19,17 @@ class WondersAppScaffold extends StatelessWidget {
     _style = AppStyle(screenSize: context.sizePx);
     return KeyedSubtree(
       key: ValueKey($styles.scale),
-      child: Theme(
-        data: $styles.colors.toThemeData(),
-        // Provide a default texts style to allow Hero's to render text properly
-        child: DefaultTextStyle(
-          style: $styles.text.body,
-          // Use a custom scroll behavior across entire app
-          child: ScrollConfiguration(
-            behavior: AppScrollBehavior(),
-            child: child,
+      child: CustomPerformanceOverlay(
+        child: Theme(
+          data: $styles.colors.toThemeData(),
+          // Provide a default texts style to allow Hero's to render text properly
+          child: DefaultTextStyle(
+            style: $styles.text.body,
+            // Use a custom scroll behavior across entire app
+            child: ScrollConfiguration(
+              behavior: AppScrollBehavior(),
+              child: child,
+            ),
           ),
         ),
       ),
