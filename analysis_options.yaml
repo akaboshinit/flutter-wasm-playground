@@ -11,6 +11,7 @@ include: package:flutter_lints/flutter.yaml
 
 analyzer:
   errors:
+    avoid_print: ignore
     prefer_const_constructors: ignore
     unused_element: ignore # mostly because of super.key
 
