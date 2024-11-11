@@ -14,6 +14,9 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
+  flutter_web_plugins:
+    sdk: flutter
+
   collection: ^1.17.0
   desktop_window: ^0.4.0
   drop_cap_text:
