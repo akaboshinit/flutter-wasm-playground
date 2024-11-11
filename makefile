@@ -1,13 +1,13 @@
 file-counts:
 	@echo "canvaskit" && find public/canvaskit -type f | wc -l
-	@echo "default" && find public/default -type f | wc -l
+	@echo "auto" && find public/auto -type f | wc -l
 	@echo "html" && find public/html -type f | wc -l
 	@echo "wasm-canvaskit-dual" && find public/wasm-canvaskit-dual -type f | wc -l
 	@echo "wasm" && find public/wasm -type f | wc -l
 
 file-size:
 	@echo "canvaskit" && du -sh public/canvaskit
-	@echo "default" && du -sh public/default
+	@echo "auto" && du -sh public/auto
 	@echo "html" && du -sh public/html
 	@echo "wasm-canvaskit-dual" && du -sh public/wasm-canvaskit-dual
 	@echo "wasm" && du -sh public/wasm
@@ -19,18 +19,19 @@ push-builds:
 	git push
 
 builds:
-	make build-default
+	make build-auto
 	make build-canvaskit
 	make build-html
 	make build-wasm-canvaskit-dual
 	make build-wasm
 
-build-default:
+# canvaskit renderer is default
+build-auto:
 	rm -rf build
-	rm -rf public/default
-	mkdir -p public/default
+	rm -rf public/auto
+	mkdir -p public/auto
 	flutter build web --release
-	cp -r build/web/* public/default/
+	cp -r build/web/* public/auto/
 
 build-canvaskit:
 	rm -rf build
