@@ -21,6 +21,8 @@ void main() async {
   }
   GoRouter.optionURLReflectsImperativeAPIs = true;
 
+  print('Running with wasm: $kIsWasm');
+
   // Start app
   registerSingletons();
 
