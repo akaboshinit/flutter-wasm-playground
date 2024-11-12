@@ -47,6 +47,7 @@ class HeavyRenderPage extends HookWidget {
       ),
       body: Column(
         children: [
+          const Text('Code base by https://developers.cyberagent.co.jp/blog/archives/36573/'),
           Expanded(
             child: TabBarView(
               controller: tabController,
