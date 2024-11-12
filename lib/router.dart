@@ -12,7 +12,7 @@ import 'package:wonders/ui/screens/page_not_found/page_not_found.dart';
 import 'package:wonders/ui/screens/playground/animation.dart';
 import 'package:wonders/ui/screens/playground/directed_graph.dart';
 import 'package:wonders/ui/screens/playground/heavy_render.dart';
-import 'package:wonders/ui/screens/playground/isorate.dart';
+import 'package:wonders/ui/screens/playground/isolate.dart';
 import 'package:wonders/ui/screens/playground/playground.dart';
 import 'package:wonders/ui/screens/timeline/timeline_screen.dart';
 import 'package:wonders/ui/screens/wonder_details/wonders_details_screen.dart';

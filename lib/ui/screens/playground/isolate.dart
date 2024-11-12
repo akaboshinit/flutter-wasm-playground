@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-// based by https://zenn.dev/koichi_51/articles/24ed1c7cc252b4
 class IsolatePage extends HookWidget {
   const IsolatePage({super.key});
 
@@ -46,6 +45,7 @@ class IsolatePage extends HookWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text('Code base by https://zenn.dev/koichi_51/articles/24ed1c7cc252b4'),
             RotationTransition(turns: animation, child: const Icon(Icons.settings, size: 100)),
             Padding(
               padding: const EdgeInsets.all(8),
