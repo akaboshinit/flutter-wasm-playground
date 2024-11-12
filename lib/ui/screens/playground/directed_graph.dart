@@ -58,6 +58,8 @@ class _DirectedGraphPageState extends State<DirectedGraphPage> {
     return Scaffold(
       body: Column(
         children: [
+          const Text(
+              'Code base by https://github.com/SkywalkerDarren/flutter_force_directed_graph/blob/master/example/lib/main.dart'),
           _buildMenu(context),
           Expanded(
             child: ForceDirectedGraphWidget(
