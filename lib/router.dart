@@ -12,6 +12,7 @@ import 'package:wonders/ui/screens/page_not_found/page_not_found.dart';
 import 'package:wonders/ui/screens/playground/animation.dart';
 import 'package:wonders/ui/screens/playground/directed_graph.dart';
 import 'package:wonders/ui/screens/playground/heavy_render.dart';
+import 'package:wonders/ui/screens/playground/isorate.dart';
 import 'package:wonders/ui/screens/playground/playground.dart';
 import 'package:wonders/ui/screens/timeline/timeline_screen.dart';
 import 'package:wonders/ui/screens/wonder_details/wonders_details_screen.dart';
@@ -25,6 +26,7 @@ class ScreenPaths {
   static String heavyRender = '/heavy_render';
   static String directedGraph = '/directed_graph';
   static String animation = '/animation';
+  static String isolate = '/isolate';
   static String settings = '/settings';
 
   static String wonderDetails(WonderType type, {required int tabIndex}) => '$home/wonder/${type.name}?t=$tabIndex';
@@ -128,6 +130,7 @@ final appRouter = GoRouter(
           AppRoute(ScreenPaths.heavyRender, (_) => const HeavyRenderPage()),
           AppRoute(ScreenPaths.directedGraph, (_) => const DirectedGraphPage()),
           AppRoute(ScreenPaths.animation, (_) => const AnimationPage()),
+          AppRoute(ScreenPaths.isolate, (_) => const IsolatePage()),
         ]),
   ],
 );

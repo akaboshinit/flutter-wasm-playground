@@ -13,6 +13,7 @@ class PlaygroundPage extends StatelessWidget {
             TextButton(onPressed: () => appRouter.go(ScreenPaths.heavyRender), child: const Text('Heavy Render')),
             TextButton(onPressed: () => appRouter.go(ScreenPaths.directedGraph), child: const Text('Directed Graph')),
             TextButton(onPressed: () => appRouter.go(ScreenPaths.animation), child: const Text('Animation')),
+            TextButton(onPressed: () => appRouter.go(ScreenPaths.isolate), child: const Text('Isolate')),
           ],
         ),
       ),
