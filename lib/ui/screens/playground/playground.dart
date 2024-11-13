@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:wonders/common_libs.dart';
 
 class PlaygroundPage extends StatelessWidget {
@@ -10,6 +11,7 @@ class PlaygroundPage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            const Text('isWasm: $kIsWasm'),
             TextButton(onPressed: () => appRouter.go(ScreenPaths.heavyRender), child: const Text('Heavy Render')),
             TextButton(onPressed: () => appRouter.go(ScreenPaths.directedGraph), child: const Text('Directed Graph')),
             TextButton(onPressed: () => appRouter.go(ScreenPaths.animation), child: const Text('Animation')),
