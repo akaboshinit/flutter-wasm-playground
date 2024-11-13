@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:performance/performance.dart';
 import 'package:wonders/common_libs.dart';
 import 'package:wonders/ui/common/app_scroll_behavior.dart';
@@ -40,7 +41,14 @@ class WondersAppScaffold extends StatelessWidget {
             Positioned.fill(
                 child: Align(
               alignment: Alignment.bottomLeft,
-              child: TextButton(onPressed: () => appRouter.go(ScreenPaths.playground), child: const Text('Playground')),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text('isWasm: $kIsWasm', style: TextStyle(color: Colors.white)),
+                  TextButton(onPressed: () => appRouter.go(ScreenPaths.home), child: const Text('Home')),
+                  TextButton(onPressed: () => appRouter.go(ScreenPaths.playground), child: const Text('Playground')),
+                ],
+              ),
             ))
           ],
         ),
